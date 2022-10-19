@@ -424,7 +424,7 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="git">
 <h1>Git<a class="headerlink" href="#git" title="Permalink to this headline">#</a></h1>
-<p>Git is the most widely spread version control system. It is mainly used in software development, but can basically be used for projects in which parallel work is done on text files. Files in a git repository go through three stages before being under version control with git:</p>
+<p>Git is the most widely spread version control system. It is mainly used in software development, but can be used for any project in which parallel work is done on text files. Files in a git repository go through three stages before being under version control with git:</p>
 <ul class="simple">
 <li><p>Untracked: The file exists, but is not part of git’s version control</p></li>
 <li><p>Staged: The file has been added to git’s version control but changes have not been are not part of a commit. Commits are a way to structure changes into groups</p></li>
@@ -441,7 +441,7 @@ Source: <a class="reference external" href="https://support.nesi.org.nz/hc/en-gb
 <p>This creates a .git folder which contains everything git needs to track your progress.</p>
 <p>In VSCode you can to this by selecting the Source Control menu item on the left side and clicking on “Initialize Repository”.</p>
 <a class="bg-primary mb-1 reference internal image-reference" href="../_images/git_init.png"><img alt="git_init" class="bg-primary mb-1 align-center" src="../_images/git_init.png" style="width: 400px;" /></a>
-<p>Or to download a preexisting git repository:</p>
+<p>You can also start with a preexisting git repository from a git server (e.g., <a class="reference external" href="http://github.com">github.com</a>):</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="o">&lt;</span><span class="n">URL</span><span class="o">&gt;</span>
 </pre></div>
 </div>
@@ -501,7 +501,7 @@ Source: <a class="reference external" href="https://support.nesi.org.nz/hc/en-gb
 </section>
 <section id="synchronize-commited-changes">
 <h3>Synchronize commited changes<a class="headerlink" href="#synchronize-commited-changes" title="Permalink to this headline">#</a></h3>
-<p>At the end of a long day of creating commits, you want to save your progress to a git server to share it with your colleagues.</p>
+<p>At the end of a long day of creating commits, you want to save your progress to a git server to share with your colleagues and to preserve your work.</p>
 <p>If you initialized the repository with <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">init</span></code> in the begining, the repository only exists locally your current machine. To add it to a git server we have to make a small configuration:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">branch</span> <span class="o">-</span><span class="n">M</span> <span class="n">main</span>
 <span class="n">git</span> <span class="n">remote</span> <span class="n">add</span> <span class="n">origin</span> <span class="o">&lt;</span><span class="n">URL</span><span class="o">&gt;</span>
@@ -520,7 +520,7 @@ Source: <a class="reference external" href="https://support.nesi.org.nz/hc/en-gb
 </section>
 <section id="reverting-changes">
 <h2>Reverting changes<a class="headerlink" href="#reverting-changes" title="Permalink to this headline">#</a></h2>
-<p>If you made a mistake, there are several methods to undo your changes depending on the git stage the undesired changes are.</p>
+<p>If you made a mistake, there are several methods to undo your changes depending on the git stage the undesired changes are in.</p>
 <section id="undo-staged-local-changes">
 <h3>Undo staged local changes<a class="headerlink" href="#undo-staged-local-changes" title="Permalink to this headline">#</a></h3>
 <p>In the simplest case the changes are still in your local staging area. To undo them, simply use:</p>
@@ -536,7 +536,7 @@ Source: <a class="reference external" href="https://support.nesi.org.nz/hc/en-gb
 </section>
 <section id="undo-commited-local-changes">
 <h3>Undo commited local changes<a class="headerlink" href="#undo-commited-local-changes" title="Permalink to this headline">#</a></h3>
-<p>If you want to undo the a commit commit run:</p>
+<p>If you want to undo the last commit run:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">reset</span> <span class="n">HEAD</span><span class="o">^</span><span class="mi">1</span>
 </pre></div>
 </div>
@@ -547,8 +547,8 @@ Source: <a class="reference external" href="https://support.nesi.org.nz/hc/en-gb
 </section>
 <section id="branches">
 <h2>Branches<a class="headerlink" href="#branches" title="Permalink to this headline">#</a></h2>
-<p>Branching allows multiple programmers to work on the same repository without getting in the way of each other. A practical example is the development of new options in an UI section of a website. For instance, if two developers want to add different options to the same website, both create a copy (or branch) of the current source code to work independant of each other. After they are done, they merge their branches back together.</p>
-<p>Until now we only worked with git’s the default branch. However, we suggest that each team member creates their own branch to allow parallel work.</p>
+<p>Branching allows multiple programmers to work on the same repository without getting in the way of each other. For instance, if two developers want to add different features to the same website, both create a copy (or branch) of the current source code to work independant of each other. After they are done, they merge their branches back together. This prevents them from overriding each other’s work.</p>
+<p>Until now we only worked with git’s default branch. However, we suggest that each team member creates their own branch to allow parallel work.</p>
 <p>The following command creates a new branch:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">branch</span> <span class="o">&lt;</span><span class="n">branch_name</span><span class="o">&gt;</span>
 </pre></div>
