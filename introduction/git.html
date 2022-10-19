@@ -52,8 +52,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Python" href="python.html" />
-    <link rel="prev" title="Setup Programming Environment" href="setup.html" />
+    <link rel="next" title="Exercises" href="../exercises.html" />
+    <link rel="prev" title="Programming Introduction" href="../introduction.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -119,29 +119,9 @@ const thebe_selector_output = ".output, .cell_output"
    </i>
   </label>
   <ul class="current">
-   <li class="toctree-l2">
-    <a class="reference internal" href="setup.html">
-     Setup Programming Environment
-    </a>
-   </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
      Git
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="python.html">
-     Python
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="libraries.html">
-     Libraries
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="pytorch.html">
-     PyTorch
     </a>
    </li>
   </ul>
@@ -293,12 +273,80 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#starting-a-repository">
+   Starting a repository
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#adding-changes">
+   Adding changes
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#stage-local-changes">
+     Stage local changes
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#commit-staged-changes">
+     Commit staged changes
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#synchronize-commited-changes">
+     Synchronize commited changes
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#reverting-changes">
+   Reverting changes
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#undo-staged-local-changes">
+     Undo staged local changes
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#undo-commited-local-changes">
+     Undo commited local changes
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#branches">
+   Branches
+  </a>
+ </li>
+</ul>
+
+    </nav>
 </div>
     </div>
     <div class="article row">
@@ -310,6 +358,63 @@ title="Print to PDF"
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#starting-a-repository">
+   Starting a repository
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#adding-changes">
+   Adding changes
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#stage-local-changes">
+     Stage local changes
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#commit-staged-changes">
+     Commit staged changes
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#synchronize-commited-changes">
+     Synchronize commited changes
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#reverting-changes">
+   Reverting changes
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#undo-staged-local-changes">
+     Undo staged local changes
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#undo-commited-local-changes">
+     Undo commited local changes
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#branches">
+   Branches
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -319,6 +424,143 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="git">
 <h1>Git<a class="headerlink" href="#git" title="Permalink to this headline">#</a></h1>
+<p>Git is the most widely spread version control system. It is mainly used in software development, but can basically be used for projects in which parallel work is done on text files. Files in a git repository go through three stages before being under version control with git:</p>
+<ul class="simple">
+<li><p>Untracked: The file exists, but is not part of git’s version control</p></li>
+<li><p>Staged: The file has been added to git’s version control but changes have not been are not part of a commit. Commits are a way to structure changes into groups</p></li>
+<li><p>Committed: The change has been committed</p></li>
+</ul>
+<p><img alt="Git Overview" src="../_images/git_overview.svg" />
+Source: <a class="reference external" href="https://support.nesi.org.nz/hc/en-gb/articles/360001508515-Git-Reference-Sheet">https://support.nesi.org.nz/hc/en-gb/articles/360001508515-Git-Reference-Sheet</a></p>
+<section id="starting-a-repository">
+<h2>Starting a repository<a class="headerlink" href="#starting-a-repository" title="Permalink to this headline">#</a></h2>
+<p>If you want to start tracking a project with git your initial command will be:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">init</span>
+</pre></div>
+</div>
+<p>This creates a .git folder which contains everything git needs to track your progress.</p>
+<p>In VSCode you can to this by selecting the Source Control menu item on the left side and clicking on “Initialize Repository”.</p>
+<a class="bg-primary mb-1 reference internal image-reference" href="../_images/git_init.png"><img alt="git_init" class="bg-primary mb-1 align-center" src="../_images/git_init.png" style="width: 400px;" /></a>
+<p>Or to download a preexisting git repository:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="o">&lt;</span><span class="n">URL</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<a class="bg-primary mb-1 reference internal image-reference" href="../_images/git_clone.png"><img alt="git_clone" class="bg-primary mb-1 align-center" src="../_images/git_clone.png" style="width: 600px;" /></a>
+</section>
+<section id="adding-changes">
+<h2>Adding changes<a class="headerlink" href="#adding-changes" title="Permalink to this headline">#</a></h2>
+<p>After you created new files or changed existing ones, you want to track these changes. To get an overview of the current state of your repository you can run:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">status</span>
+</pre></div>
+</div>
+<p>Or simply take a look at the Source Control overview in VSCode:</p>
+<a class="bg-primary mb-1 reference internal image-reference" href="../_images/git_status.png"><img alt="git_clone" class="bg-primary mb-1 align-center" src="../_images/git_status.png" style="width: 600px;" /></a>
+<section id="stage-local-changes">
+<h3>Stage local changes<a class="headerlink" href="#stage-local-changes" title="Permalink to this headline">#</a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">add</span></code> command tells git which folders and files it should add to the staging area:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">add</span> <span class="o">&lt;</span><span class="n">file</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>In Linux the dot always referes to the directory that is currently open. A common practice to add everything is to navigate to the top folder of your repository and run:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">add</span> <span class="o">.</span>
+</pre></div>
+</div>
+<p>The VSCode Source Control enables your to do this graphically:</p>
+<a class="bg-primary mb-1 reference internal image-reference" href="../_images/git_stage.png"><img alt="git_stage" class="bg-primary mb-1 align-center" src="../_images/git_stage.png" style="width: 600px;" /></a>
+</section>
+<section id="commit-staged-changes">
+<h3>Commit staged changes<a class="headerlink" href="#commit-staged-changes" title="Permalink to this headline">#</a></h3>
+<p>At some point you want to collect your changes to a commit. This is done by:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">commit</span> <span class="o">-</span><span class="n">m</span> <span class="s2">&quot;This is a message&quot;</span>
+</pre></div>
+</div>
+<p>or in VSCode:</p>
+<a class="bg-primary mb-1 reference internal image-reference" href="../_images/git_commit.png"><img alt="git_commit" class="bg-primary mb-1 align-center" src="../_images/git_commit.png" style="width: 600px;" /></a>
+<p>git generally requires a non-empty message because providing a meaningful commit message is part of good development practice and good repository stewardship. This is particularly useful for others to understand your thought process behind changes as well as for yourself to remember what you did a few months ago. A commit message should be a brief and precise description of which changes your commit contains. If your message too long (&gt; 50 characters) or hard to write, it could worth to reconsider the content of your commit (e.g., divide it into smaller commits). Some examples for good vs. bad commit messages:</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Good</p></th>
+<th class="head"><p>Bad</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>resolve import exception</p></td>
+<td><p>fix bug</p></td>
+</tr>
+<tr class="row-odd"><td><p>add reset password menu button</p></td>
+<td><p>add new feature</p></td>
+</tr>
+<tr class="row-even"><td><p>delete deprecated function</p></td>
+<td><p>(no message)</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>long lists of changes</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="synchronize-commited-changes">
+<h3>Synchronize commited changes<a class="headerlink" href="#synchronize-commited-changes" title="Permalink to this headline">#</a></h3>
+<p>At the end of a long day of creating commits, you want to save your progress to a git server to share it with your colleagues.</p>
+<p>If you initialized the repository with <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">init</span></code> in the begining, the repository only exists locally your current machine. To add it to a git server we have to make a small configuration:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">branch</span> <span class="o">-</span><span class="n">M</span> <span class="n">main</span>
+<span class="n">git</span> <span class="n">remote</span> <span class="n">add</span> <span class="n">origin</span> <span class="o">&lt;</span><span class="n">URL</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>The first command renames the default branch to main. The default git branch name is “master”. In 2020, Github has changed the name to “main”, so we also need to rename our local repository accordingly. The second command configures the desired remote repository. “origin” is the name for the remote repository and can be changed to any other name. However, naming it “origin” is a widely spread convention.</p>
+<p>Finally, we can upload the changes with:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">push</span> <span class="o">-</span><span class="n">u</span> <span class="n">origin</span> <span class="n">main</span>
+</pre></div>
+</div>
+<p>Notice that we are specifying the remote and branch name. This is only required for the first push. Afterwards, git knows where to push:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">push</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="reverting-changes">
+<h2>Reverting changes<a class="headerlink" href="#reverting-changes" title="Permalink to this headline">#</a></h2>
+<p>If you made a mistake, there are several methods to undo your changes depending on the git stage the undesired changes are.</p>
+<section id="undo-staged-local-changes">
+<h3>Undo staged local changes<a class="headerlink" href="#undo-staged-local-changes" title="Permalink to this headline">#</a></h3>
+<p>In the simplest case the changes are still in your local staging area. To undo them, simply use:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">reset</span> <span class="o">&lt;</span><span class="n">file</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>to unstage a single file or:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">reset</span>
+</pre></div>
+</div>
+<p>to unstage everything. In VSCode this is done by clicking on the minus sign next to the staged file:</p>
+<a class="bg-primary mb-1 reference internal image-reference" href="../_images/git_unstage.png"><img alt="git_stage" class="bg-primary mb-1 align-center" src="../_images/git_unstage.png" style="width: 600px;" /></a>
+</section>
+<section id="undo-commited-local-changes">
+<h3>Undo commited local changes<a class="headerlink" href="#undo-commited-local-changes" title="Permalink to this headline">#</a></h3>
+<p>If you want to undo the a commit commit run:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">reset</span> <span class="n">HEAD</span><span class="o">^</span><span class="mi">1</span>
+</pre></div>
+</div>
+<p>1 can be replaced with any other integer and specifies how many commits git should go back.</p>
+<p>The VSCode UI also offers an option to undo your last commit:</p>
+<a class="bg-primary mb-1 reference internal image-reference" href="../_images/git_reset.png"><img alt="git_reset" class="bg-primary mb-1 align-center" src="../_images/git_reset.png" style="width: 600px;" /></a>
+</section>
+</section>
+<section id="branches">
+<h2>Branches<a class="headerlink" href="#branches" title="Permalink to this headline">#</a></h2>
+<p>Branching allows multiple programmers to work on the same repository without getting in the way of each other. A practical example is the development of new options in an UI section of a website. For instance, if two developers want to add different options to the same website, both create a copy (or branch) of the current source code to work independant of each other. After they are done, they merge their branches back together.</p>
+<p>Until now we only worked with git’s the default branch. However, we suggest that each team member creates their own branch to allow parallel work.</p>
+<p>The following command creates a new branch:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">branch</span> <span class="o">&lt;</span><span class="n">branch_name</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>The equivalent way of doing this in VSCode is the branch selection in the bottom left corner:</p>
+<a class="bg-primary mb-1 reference internal image-reference" href="../_images/new_branch.png"><img alt="git_reset" class="bg-primary mb-1 align-center" src="../_images/new_branch.png" style="width: 600px;" /></a>
+<p>This also enables you to switch between branches.</p>
+<p>Switching in the terminal is done with the <code class="docutils literal notranslate"><span class="pre">checkout</span></code> command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">checkout</span> <span class="o">&lt;</span><span class="n">branch_name</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -348,17 +590,17 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="setup.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="../introduction.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Setup Programming Environment</p>
+            <p class="prev-next-title">Programming Introduction</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="python.html" title="next page">
+    <a class='right-next' id="next-link" href="../exercises.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Python</p>
+        <p class="prev-next-title">Exercises</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
