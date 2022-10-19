@@ -1,6 +1,6 @@
 # Git
 
-Git is the most widely spread version control system. It is mainly used in software development, but can basically be used for projects in which parallel work is done on text files. Files in a git repository go through three stages before being under version control with git:
+Git is the most widely spread version control system. It is mainly used in software development, but can be used for any project in which parallel work is done on text files. Files in a git repository go through three stages before being under version control with git:
 
 - Untracked: The file exists, but is not part of git's version control
 - Staged: The file has been added to git's version control but changes have not been are not part of a commit. Commits are a way to structure changes into groups 
@@ -26,7 +26,7 @@ In VSCode you can to this by selecting the Source Control menu item on the left 
 :align: center
 ```
 
-Or to download a preexisting git repository:
+You can also start with a preexisting git repository from a git server (e.g., github.com):
 ```
 git clone <URL>
 ```
@@ -103,7 +103,7 @@ git generally requires a non-empty message because providing a meaningful commit
 | delete deprecated function           | (no message)         |
 |                                      | long lists of changes|
 ### Synchronize commited changes
-At the end of a long day of creating commits, you want to save your progress to a git server to share it with your colleagues.
+At the end of a long day of creating commits, you want to save your progress to a git server to share with your colleagues and to preserve your work.
 
 If you initialized the repository with ```git init``` in the begining, the repository only exists locally your current machine. To add it to a git server we have to make a small configuration:
 
@@ -127,7 +127,7 @@ git push
 
 ## Reverting changes
 
-If you made a mistake, there are several methods to undo your changes depending on the git stage the undesired changes are. 
+If you made a mistake, there are several methods to undo your changes depending on the git stage the undesired changes are in. 
 
 
 ### Undo staged local changes
@@ -154,7 +154,7 @@ to unstage everything. In VSCode this is done by clicking on the minus sign next
 
 ### Undo commited local changes
 
-If you want to undo the a commit commit run: 
+If you want to undo the last commit run: 
 
 ```
 git reset HEAD^1
@@ -174,9 +174,9 @@ The VSCode UI also offers an option to undo your last commit:
 
 ## Branches
 
-Branching allows multiple programmers to work on the same repository without getting in the way of each other. A practical example is the development of new options in an UI section of a website. For instance, if two developers want to add different options to the same website, both create a copy (or branch) of the current source code to work independant of each other. After they are done, they merge their branches back together.
+Branching allows multiple programmers to work on the same repository without getting in the way of each other. For instance, if two developers want to add different features to the same website, both create a copy (or branch) of the current source code to work independant of each other. After they are done, they merge their branches back together. This prevents them from overriding each other's work.
 
-Until now we only worked with git's the default branch. However, we suggest that each team member creates their own branch to allow parallel work.
+Until now we only worked with git's default branch. However, we suggest that each team member creates their own branch to allow parallel work.
 
 The following command creates a new branch:
 
