@@ -6,11 +6,7 @@ root: landing
 chapters:
 - file: introduction
   sections: 
-    - file: introduction/setup
     - file: introduction/git
-    - file: introduction/python
-    - file: introduction/libraries
-    - file: introduction/pytorch
 - file: exercises
   sections: 
     - file: exercises/alex-net
