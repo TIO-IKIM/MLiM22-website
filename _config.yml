@@ -2,7 +2,7 @@
 # Learn more at https://jupyterbook.org/customize/config.html
 
 title: Machine Learning in Medicine - Theory & Practice
-author: MML Group
+author: <a href="https://mml.ikim.nrw">MML Group</a>
 logo: 
 
 # Force re-execution of notebooks on each build.
